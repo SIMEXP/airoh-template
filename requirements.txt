@@ -1,2 +1,16 @@
+# Core scientific stack
+pandas
+numpy
+scikit-learn
+scipy
+matplotlib
+seaborn
+plotly
+
+# Word cloud
 wordcloud
+imageio
+
+# Notebook tools (already in most Jupyter images, but safe to include)
 jupyter
+nbconvert

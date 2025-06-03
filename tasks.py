@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from invoke import task
 
 @task
@@ -30,3 +31,13 @@ def fetch(c):
     """
     from airoh.datalad import import_file
     import_file(c, "papers")
+
+@task
+def run(c):
+    """
+    Re-run all notebooks.
+    """
+    from airoh.utils import run_figures
+    notebooks_dir = Path(c.config.get("notebooks_dir"))
+    output_dir = Path(c.config.get("output_data_dir"))
+    run_figures(c, notebooks_dir, output_dir)

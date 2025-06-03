@@ -18,4 +18,3 @@ files:
   papers:
     url: https://figshare.com/ndownloader/files/9843721
     output_file: source_data/YNIMG_BrainParcellation_summary.tsv
-  
