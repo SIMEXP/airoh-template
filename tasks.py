@@ -22,3 +22,11 @@ def setup(c):
     from airoh.utils import setup_env_python
     setup_env_python(c, "requirements.txt")
     print(f"✨ Setup complete!")
+
+@task
+def fetch(c):
+    """
+    Retrieve all data assets.
+    """
+    from airoh.datalad import import_file
+    import_file(c, "papers")
