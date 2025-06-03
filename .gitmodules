@@ -1,0 +1,3 @@
+[submodule "airoh"]
+	path = airoh
+	url = https://github.com/simexp/airoh.git
