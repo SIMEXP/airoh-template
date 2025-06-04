@@ -1,6 +1,7 @@
 # source data
 source_data/*tsv
 !source_data/.gitkeep
+output_data
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

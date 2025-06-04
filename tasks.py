@@ -24,7 +24,17 @@ def run(c):
     """
     Re-run all notebooks.
     """
-    from airoh.utils import run_figures
+    from airoh.utils import run_figures, ensure_dir_exist
     notebooks_dir = Path(c.config.get("notebooks_dir"))
     output_dir = Path(c.config.get("output_data_dir"))
+    ensure_dir_exist(c, "output_data_dir")
     run_figures(c, notebooks_dir, output_dir)
+
+@task
+def clean(c):
+    """
+    Clean the output folder.
+    """
+    from airoh.utils import clean_folder
+    clean_folder(c, "output_data_dir")
+
