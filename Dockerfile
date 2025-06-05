@@ -8,9 +8,9 @@ USER $NB_UID
 # Copy project code
 COPY tasks.py tasks.py
 COPY invoke.yaml invoke.yaml
+COPY requirements.txt requirements.txt
 COPY setup.txt setup.txt
-COPY airoh/ airoh/
 
 # Setup environment via user-editable script
-RUN pip install invoke && \
+RUN pip install -r setup.txt && \
     invoke setup
