@@ -4,6 +4,19 @@ _why don't you have a cup of relaxing jasmin tea?_
 
 This repository provides a minimal, modular, and **fully reproducible** template for scientific workflows. Built on the [`invoke`](https://www.pyinvoke.org/) task runner and containerization (Docker or Apptainer), it lets you go from clean clone to output figures with just a few commands.
 
+⚠️ **Status**: This template is in its early days. Expect rapid iteration and changes.
+> ✨ TL;DR:
+> 
+> 🧪 This repository is a [GitHub template](https://github.com/SIMEXP/airoh-template/generate). Click **“Use this template”** to create your own analysis project.
+>
+> ```bash
+> pip install -r setup.txt
+> invoke setup
+> invoke fetch
+> invoke run
+> ```
+> Voilà — from clone to full reproduction.
+
 The logic is powered by [`airoh`](https://pypi.org/project/airoh/), a lightweight, pip-installable Python package of reusable `invoke` tasks.
 
 > 🧠 **Background**: This repository reproduces the figures used in the editorial [Craddock et al., 2018](https://doi.org/10.1016/j.neuroimage.2017.11.063) to demonstrate how the `airoh-template` works. The original analysis grouped papers from a 2017 special issue on brain parcellation and segmentation using a data-driven categorization of abstract terms. This template shows how to reproduce that analysis using Jupyter notebooks and reusable infrastructure. It should be easy to adapt to a variety of other projects.
@@ -138,7 +151,6 @@ By default, the template excludes `source_data/` and `output_data/` from Git. If
 
 ## 🧰 Task Overview
 
-```
 | Task             | Description                                                    |
 | ---------------- | -------------------------------------------------------------- |
 | `setup`          | Installs Python dependencies from `requirements.txt`           |
@@ -149,7 +161,6 @@ By default, the template excludes `source_data/` and `output_data/` from Git. If
 | `docker-archive` | Archives the Docker image into a `.tar.gz` for sharing         |
 | `docker-setup`   | Loads a prebuilt image from a `.tar.gz` archive (e.g., Zenodo) |
 | `docker-run`     | Runs any task inside the Docker image                          |
-```
 
 Use `invoke --list` or `invoke --help <task>` for descriptions and usage.
 
@@ -165,7 +176,6 @@ Use `invoke --list` or `invoke --help <task>` for descriptions and usage.
 
 ## 📁 Folder Structure
 
-```
 | Folder         | Description                              |
 | -------------- | ---------------------------------------- |
 | `notebooks/`   | Jupyter notebooks (e.g., one per figure) |
@@ -173,18 +183,15 @@ Use `invoke --list` or `invoke --help <task>` for descriptions and usage.
 | `output_data/` | Generated results and figures            |
 | `tasks.py`     | Project-specific invoke entrypoint       |
 | `invoke.yaml`  | Config file for all reusable tasks       |
-```
 
 ---
 
 ## 🧪 Want to use containers?
 
-```
 - Build: invoke docker-build
 - Archive: invoke docker-archive
 - Run: invoke docker-run --task run
 - Setup from archive: invoke docker-setup 
-```
 
 ---
 
