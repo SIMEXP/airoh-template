@@ -183,7 +183,7 @@ Use `invoke --list` or `invoke --help <task>` for descriptions and usage.
 - Build: invoke docker-build
 - Archive: invoke docker-archive
 - Run: invoke docker-run --task run
-- Setup from archive: invoke docker-setup --url <zenodo_url>
+- Setup from archive: invoke docker-setup 
 ```
 
 ---
