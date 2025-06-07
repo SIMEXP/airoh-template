@@ -1,6 +1,6 @@
 # Airoh Template: Reproducible Pipelines Made Simple
 
-\_why don't you have a cup of relaxing jasmin tea?\_
+_why don't you have a cup of relaxing jasmin tea?_
 
 This repository provides a minimal, modular, and **fully reproducible** template for scientific workflows. Built on the [`invoke`](https://www.pyinvoke.org/) task runner and containerization (Docker or Apptainer), it lets you go from clean clone to output figures with just a few commands.
 
