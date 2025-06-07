@@ -99,6 +99,43 @@ Removes the output folder listed in `invoke.yaml` under `output_data_dir`.
 
 ---
 
+## 📦 Using Datalad for Large Files
+
+This template supports `datalad` to manage large assets (e.g., Docker images, datasets). To avoid bloating your Git repository:
+
+1. Make sure the repo is initialized with Datalad:
+
+   ```bash
+   datalad create --force
+   ```
+
+2. Make sure `.gitattributes` is configured to match your needs. For example, this template excludes large Docker archives using:
+
+   ```text
+   *.tar.gz annex.largefiles=(largerthan=10MB)
+   ```
+
+3. Add and save your large files with:
+
+   ```bash
+   datalad add output_data/your-archive.tar.gz
+   datalad save -m "Added archive with git-annex"
+   ```
+
+4. To verify that the file is tracked by `git-annex`, run:
+
+   ```bash
+   git annex whereis output_data/your-archive.tar.gz
+   ```
+
+If you're working with Zenodo or other public sources, you can also configure `invoke.yaml` to fetch and extract archives via `invoke fetch`.
+
+You can add entries under the `files:` section in `invoke.yaml` to automate downloads using `invoke fetch`.
+
+By default, the template excludes `source_data/` and `output_data/` from Git. If you prefer to track them, you can manage them with Datalad instead.
+
+---
+
 ## 🧰 Task Overview
 
 ```
