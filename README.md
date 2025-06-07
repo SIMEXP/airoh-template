@@ -2,7 +2,7 @@
 
 _why don't you have a cup of relaxing jasmin tea?_
 
-This repository provides a minimal, modular, and **fully reproducible** template for scientific workflows. Built on the [`invoke`](https://www.pyinvoke.org/) task runner and containerization (Docker or Apptainer), it lets you go from clean clone to output figures with just a few commands.
+This repository provides a minimal, modular, and **fully reproducible** template for scientific workflows. Built on the [`invoke`](https://www.pyinvoke.org/) task runner, [datalad](https://www.datalad.org/) for data management as well as containerization tools (Docker or Apptainer), it lets you go from clean clone to output figures with just a few commands.
 
 ⚠️ **Status**: This template is in its early days. Expect rapid iteration and changes.
 > ✨ TL;DR:
