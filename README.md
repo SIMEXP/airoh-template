@@ -57,11 +57,11 @@ invoke docker-build
 invoke docker-archive
 ```
 
-This will save your image to a `.tar.gz` archive that can later be loaded with `docker-setup`, e.g.:
+This will save your image to a `.tar.gz` archive that can later be loaded with `docker-setup`:
 
 ```
 bash
-invoke docker-setup --url https://some/zenodo/archive.tar.gz
+invoke docker-setup 
 ```
 
 ---
